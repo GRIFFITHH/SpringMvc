@@ -94,6 +94,7 @@ public class RequestParamController {
     @ResponseBody
     @RequestMapping("/model-attribute-v1")
     public String modelAttributeV1(@ModelAttribute HelloData helloData) {
+        // helloData에 데이터를 넣어주는 과정의 코드를 @ModelAttribute가 대신해줌
         log.info("username={},age={}", helloData.getUsername(), helloData.getAge());
         log.info("helloData={}",helloData);
         return "ok";
